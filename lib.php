@@ -14,7 +14,7 @@ function getDeprecatedWords(){
 
 function addDeprecatedWords($depWord){
     if (isset($_POST['add'])) {
-        if (isset($depWord)) { //если очистить depWord.db при добавлении второго слова появляется ошибка- почему отрабатывает foreach если если есть if
+        if (isset($depWord)) {
             foreach ($depWord as $listWord) {
                 if ($listWord['word'] == $_POST['word']) {
                     exit('Word ' . $listWord['word'] . ' is already in the list!');
