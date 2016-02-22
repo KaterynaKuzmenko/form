@@ -10,6 +10,19 @@ div.parent{
 .form{
     text-align: center;
 }
+p{
+    font-weight: 800;
+    margin-bottom: -1px;
+}
+hr{
+    width: 90%;
+}
+
+.userName{
+    font-weight: 600;
+    margin-top: -3px;
+    margin-bottom: 1px;
+}
 .message{
     background: white;
     border: 1px solid gray;
@@ -19,7 +32,7 @@ div.parent{
     height: auto;
     width: 200px;
 }
-.message:nth-child(even){
+.message:nth-child(odd){
     background: lightblue;
     border: 1px solid darkslateblue;
     border-radius: 10px;
@@ -27,8 +40,5 @@ div.parent{
     width: 200px;
     height: auto;
     margin: 0px 48%;
-}
 
-label:nth-child(odd){
-    margin: 0px 0px 0px 210px;
 }

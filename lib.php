@@ -72,22 +72,22 @@ function antiMat($messages){
                     $post['userName'] = str_ireplace($word, "CENSORED", $post['userName']);
                     $post['userMessage'] = str_ireplace($word, "CENSORED", $post['userMessage']);
                 }
-                $messages[] = $post;
+                $message[] = $post;
             }
         }
     }
-        return $messages;
+        return $message;
 }
 
-function showContent($messages){
-    if(isset($messages)){
-        $messages = array_reverse($messages);
-        foreach($messages as $post){
+function showContent($message){
+    if(isset($message)){
+        $message = array_reverse($message);
+        foreach($message as $post){
             if($post['userName'] == ''){
                 $post['userName'] = 'guest';
             }
-            echo "<label>user: {$post['userName']} writes...</label>";
-            echo "<div class='message'>{$post['userMessage']}</div>";
+            echo "<div class='message'><p class='userName'>user: {$post['userName']} writes...</p>{$post['userMessage']}</div>";
+            echo "<div></div>";
             echo '<br>';
 
         }

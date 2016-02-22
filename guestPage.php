@@ -22,11 +22,13 @@ include_once "lib.php";
             <input type="submit" name="submit" value="submit">
           </form>
     </div>
-
-    <?php $messages = getContent();
-     $messages = addComment($messages);
-     $messages = antiMat($messages);
-     showContent($messages);?>
+    <hr>
+    <?php
+    $messages = getContent();
+    $messages = addComment($messages);
+    $message = antiMat($messages);
+    showContent($message);
+    ?>
 
 </div>
 
